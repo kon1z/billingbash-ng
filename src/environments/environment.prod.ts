@@ -10,7 +10,7 @@ export const environment = {
     logoUrl: '',
   },
   oAuthConfig: {
-    issuer: 'https://localhost:44331/',
+    issuer: 'https://localhost:44382/',
     redirectUri: baseUrl,
     clientId: 'BillingBash_App',
     responseType: 'code',
@@ -19,7 +19,7 @@ export const environment = {
   },
   apis: {
     default: {
-      url: 'https://localhost:44331',
+      url: 'https://localhost:44382',
       rootNamespace: 'Kon.BillingBash',
     },
   },

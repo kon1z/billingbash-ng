@@ -1,5 +1,5 @@
 {
-  "name": "BillingBash",
+  "name": "billing-bash",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
@@ -30,6 +30,8 @@
     "@angular/platform-browser": "~18.1.0",
     "@angular/platform-browser-dynamic": "~18.1.0",
     "@angular/router": "~18.1.0",
+    "@primeng/themes": "^19.0.2",
+    "primeng": "^19.0.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.0.0",
     "zone.js": "~0.14.0"

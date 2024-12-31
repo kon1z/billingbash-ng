@@ -25,6 +25,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('@abp/ng.setting-management').then(m => m.SettingManagementModule.forLazy()),
   },
+  {
+    path: 'consumption-record',
+    loadChildren: () =>
+      import('./consumption-record/consumption-record.module').then(m => m.ConsumptionRecordModule),
+  }
 ];
 
 @NgModule({

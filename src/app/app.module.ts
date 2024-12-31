@@ -11,8 +11,6 @@ import { provideIdentityConfig } from '@abp/ng.identity/config';
 import { provideSettingManagementConfig } from '@abp/ng.setting-management/config';
 import { provideTenantManagementConfig } from '@abp/ng.tenant-management/config';
 import { provideAccountConfig } from '@abp/ng.account/config';
-import { ThemeLeptonXModule } from '@abp/ng.theme.lepton-x';
-import { AccountLayoutModule } from '@abp/ng.theme.lepton-x/account';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -20,19 +18,19 @@ import { environment } from '../environments/environment';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { APP_ROUTE_PROVIDER } from './route.provider';
+import { provideThemeBasicConfig } from '@abp/ng.theme.basic';
 
 @NgModule({
+  bootstrap: [AppComponent],
+  declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     CoreModule,
     ThemeSharedModule,
-    ThemeLeptonXModule.forRoot(),
-    AccountLayoutModule.forRoot(),
-    InternetConnectionStatusComponent,
+    InternetConnectionStatusComponent
   ],
-  declarations: [AppComponent],
   providers: [
     APP_ROUTE_PROVIDER,
     provideAbpCore(
@@ -48,7 +46,7 @@ import { APP_ROUTE_PROVIDER } from './route.provider';
     provideIdentityConfig(),
     provideTenantManagementConfig(),
     provideFeatureManagementConfig(),
-  ],
-  bootstrap: [AppComponent],
+    provideThemeBasicConfig()
+  ]
 })
 export class AppModule {}
