@@ -1,0 +1,19 @@
+<div class="application-layout">
+  <header class="header">
+    <abp-logo></abp-logo>
+<!--    <app-my-nav-items></app-my-nav-items>-->
+    <abp-nav-items></abp-nav-items>
+  </header>
+  <div class="main-content">
+    <nav class="nav">
+      <p>Navigation</p>
+      <app-my-routes></app-my-routes>
+    </nav>
+    <article class="article">
+      <router-outlet #outlet="outlet"></router-outlet>
+    </article>
+  </div>
+  <footer class="footer">
+    <p>Footer</p>
+  </footer>
+</div>

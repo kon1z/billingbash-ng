@@ -1,1 +1,38 @@
-<p>consumption-record-list works!</p>
+<div>
+  <button (click)="query()">查询</button>
+  <button (click)="clear()">清空</button>
+  <button (click)="create()">新增</button>
+</div>
+<table>
+  <thead>
+  <tr>
+    <th>id</th>
+    <th>消费金额</th>
+    <th>消费时间</th>
+    <th>支付方式</th>
+    <th>备注</th>
+    <th>参与人</th>
+    <th>操作</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let consumption of consumptionRecordDtos">
+    <td>{{ consumption.id }}</td>
+    <td>{{ consumption.consumptionAmount }}</td>
+    <td>{{ consumption.consumptionDate }}</td>
+    <td>{{ getPaymentMethodOptions(consumption.paymentMethod) }}</td>
+    <td>{{ consumption.remarks }}</td>
+    <td>{{ getJoinerNames(consumption.joiners) }}</td>
+    <td>
+      <button (click)="detail(consumption.id)">详细</button>
+      <button (click)="update(consumption.id)">更新</button>
+      <button (click)="delete(consumption.id)">删除</button>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<div>
+  <span>{{ skipCount }}/{{ totalCount }}</span>
+  <input type="number" [(ngModel)]="maxResultCount" />
+  <button (click)="nextPage()">下一页</button>
+</div>

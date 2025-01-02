@@ -1,1 +1,20 @@
-<p>consumption-record-create works!</p>
+<form [formGroup]="formGroup">
+  <label for="consumptionAmount">消费金额</label>
+  <input id="consumptionAmount" formControlName="consumptionAmount" type="number" />
+  <label for="consumptionDate">消费日期</label>
+  <input id="consumptionDate" formControlName="consumptionDate" type="datetime-local" />
+  <label for="paymentMethod">支付方式</label>
+  <select id="paymentMethod" formControlName="paymentMethod">
+    <option value="Alipay">支付宝</option>
+    <option value="WeChatPay">微信</option>
+    <option value="Cash">现金</option>
+  </select>
+  <label for="joiners">参与人（按住Ctrl多选）</label>
+  <select id="joiners" *ngFor="let user of users" multiple formControlName="joiners">
+    <option value="{{user.id}}">{{ user.name }}</option>
+  </select>
+  <label for="remarks">备注</label>
+  <textarea id="remarks" formControlName="remarks"></textarea>
+  <button type="submit" (click)="submit()">提交</button>
+  <button type="reset">重置</button>
+</form>

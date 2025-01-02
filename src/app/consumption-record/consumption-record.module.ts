@@ -6,6 +6,7 @@ import { ConsumptionRecordListComponent } from './consumption-record-list/consum
 import { ConsumptionRecordCreateComponent } from './consumption-record-create/consumption-record-create.component';
 import { ConsumptionRecordUpdateComponent } from './consumption-record-update/consumption-record-update.component';
 import { ConsumptionRecordDetailComponent } from './consumption-record-detail/consumption-record-detail.component';
+import { CoreModule } from '@abp/ng.core';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { ConsumptionRecordDetailComponent } from './consumption-record-detail/co
   ],
   imports: [
     CommonModule,
-    ConsumptionRecordRoutingModule
+    ConsumptionRecordRoutingModule,
+    CoreModule
   ]
 })
 export class ConsumptionRecordModule {
