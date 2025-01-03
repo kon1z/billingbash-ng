@@ -1,6 +1,6 @@
 import { Environment } from '@abp/ng.core';
 
-const baseUrl = 'http://localhost:4200';
+const baseUrl = 'http://konsoft.top:4200';
 
 export const environment = {
   production: true,
@@ -10,7 +10,7 @@ export const environment = {
     logoUrl: '',
   },
   oAuthConfig: {
-    issuer: 'https://localhost:44382/',
+    issuer: 'https://konsoft.top:8443/',
     redirectUri: baseUrl,
     clientId: 'BillingBash_App',
     responseType: 'code',
@@ -19,7 +19,7 @@ export const environment = {
   },
   apis: {
     default: {
-      url: 'https://localhost:44382',
+      url: 'https://konsoft.top:8443',
       rootNamespace: 'Kon.BillingBash',
     },
   },

@@ -2,7 +2,6 @@ import { Component, ElementRef, Input, QueryList, Renderer2, TrackByFunction, Vi
 import { ABP, LocalizationModule, PermissionDirective, RoutesService, TreeNode } from '@abp/ng.core';
 import { AsyncPipe, NgClass, NgTemplateOutlet } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { NgbDropdown, NgbDropdownToggle } from '@ng-bootstrap/ng-bootstrap';
 import { EllipsisDirective } from '@abp/ng.theme.shared';
 
 @Component({
@@ -14,8 +13,6 @@ import { EllipsisDirective } from '@abp/ng.theme.shared';
     RouterLink,
     NgClass,
     LocalizationModule,
-    NgbDropdown,
-    NgbDropdownToggle,
     EllipsisDirective,
     AsyncPipe
   ],

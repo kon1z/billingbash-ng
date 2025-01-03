@@ -1,0 +1,36 @@
+# 忽略 Angular 构建缓存和配置
+.angular/
+
+# 忽略 node_modules 目录
+node_modules/
+
+# 忽略 dist 目录（构建产物）
+dist/
+
+# 忽略 Git 目录和 Git 配置文件
+.git/
+.gitignore
+
+# 忽略 Dockerfile 和 .dockerignore 文件
+Dockerfile
+.dockerignore
+
+# 忽略 npm 缓存
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# 忽略 IDE 或编辑器相关文件
+.idea/
+.vscode/
+
+# 忽略临时文件
+*.swp
+*.swo
+
+# 忽略操作系统生成的文件
+.DS_Store
+Thumbs.db
+
+# 忽略构建产物和日志文件
+*.log
